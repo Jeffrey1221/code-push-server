@@ -1,0 +1,25 @@
+.content {
+  padding: 5px 0;
+  background-color: #fff;
+}
+.type-tab {
+  padding: 5px 0;
+  text-align: center;
+}
+a.btn {
+  min-width: 120px;
+  margin: 0 20px;
+}
+#subAndroidForm {
+  margin: 30px auto;
+  max-width: 680px;
+}
+.up-package {
+  margin-top: 15px;
+}
+#callback {
+  margin: 15px 0;
+}
+label {
+  text-align: left;
+}

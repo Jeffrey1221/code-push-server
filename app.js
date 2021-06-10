@@ -15,6 +15,7 @@ var accessKeys = require('./routes/accessKeys');
 var account = require('./routes/account');
 var users = require('./routes/users');
 var apps = require('./routes/apps');
+var upgrade = require('./routes/upgrade');
 var AppError = require('./core/app-error');
 var log4js = require('log4js');
 var log = log4js.getLogger("cps:app");
@@ -79,6 +80,7 @@ app.use('/accessKeys', accessKeys);
 app.use('/account', account);
 app.use('/users', users);
 app.use('/apps', apps);
+app.use('/upgrade', upgrade);
 
 // development error handler
 // will print stacktrace

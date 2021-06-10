@@ -1,0 +1,31 @@
+extends ../layout
+block css
+  link(rel='stylesheet', href='/stylesheets/upgrade.css')
+
+block content
+  h1(style="text-align: center;")= title
+  p(style="text-align: center;") 请填写以下信息
+  .content
+    #tab.type-tab
+      a#Android.btn.btn-default.btn-primary 发布Android版
+      a#IOS.btn.btn-default 发布IOS版
+
+    form#subAndroidForm
+      div.form-group
+        label#packLabel.up-package 上传打包.apk文件
+        input#file.form-control(type="file" name="file")
+        p.help-block 请选择你的最新打包文件
+      div.form-group
+        label 版本号(用于展示)，如：1.0.2
+        input#ver.form-control(name="version")
+      div.form-group
+        label 更新说明
+        textarea#commit.form-control(rows="5" name="commit")
+      div#callback
+      button#upPackage.btn.btn-lg.btn-block.btn-warning(type="button") 立即发布Android
+
+block js
+  script(src='/js/upgrade.js')
+
+
+

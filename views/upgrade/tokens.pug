@@ -80,40 +80,4 @@ block js
         }
       });
     });
-    $('#upgradeBtn').on('click', function () {
-      var query = parseQuery(location.search);
-      var createdBy = query.hostname;
-      var time = (new Date()).getTime();
-      if (createdBy == null || createdBy == undefined || createdBy == "") {
-        createdBy = 'Login-' + time;
-      }
-      var postParams = {
-        createdBy: createdBy,
-        friendlyName: "Login-" + time,
-        ttl: 60 * 60 * 24 * 30 * 1000,
-        description: "Login-" + time,
-        isSession: true
-      };
-      var access_token = sessionStorage.getItem('auth');
-      $.ajax({
-        type: 'post',
-        data: postParams,
-        headers: {
-          Authorization: 'Bearer ' + access_token
-        },
-        url: '/accessKeys',
-        dataType: 'json',
-        success: function (data) {
-          location.href = '/upgrade'
-        },
-        error: function (XMLHttpRequest, textStatus, errorThrown) {
-          if (errorThrown == 'Unauthorized') {
-            alert('请重新登录!');
-            location.href = '/auth/login'
-          } else {
-            alert(errorThrown);
-          }
-        }
-      });
-    });
 
