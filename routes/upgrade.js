@@ -21,7 +21,7 @@ router.post('/package', upload.single('file'), (req, res) => {
     version = _.trim(req.body.version) || '',
     commit = _.trim(req.body.commit) || 'Optimized user experience',
     type = _.trim(req.body.type),
-    size = _.trim(req.body.size) ? parseInt(`${Number(_.trim(req.body.size)) / 1024 / 1024}`) : 0,
+    size = _.trim(req.body.size) ? parseInt(`${Number(_.trim(req.body.size)) / 1024}`) : 0,
     versionCode = 0
 
   if (type === 'IOS') storedFileName = `${new Date().getMonth() + 1}-${new Date().getDate()}_v${version}_${storedFileName}`

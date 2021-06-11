@@ -1,11 +1,11 @@
 {
-  "name": "code-push-server",
+  "name": "code-push-server-jeffrey",
   "description": "CodePush service is hotupdate services which adapter react-native-code-push and cordova-plugin-code-push",
-  "version": "0.5.4",
+  "version": "0.5.6",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/lisong/code-push-server.git"
+    "url": "git://github.com/Jeffrey/code-push-server.git"
   },
   "keywords": [
     "code-push",
@@ -16,9 +16,9 @@
     "push"
   ],
   "author": {
-    "name": "Tab Lee",
-    "email": "lisong2010@gmail.com",
-    "url": "https://github.com/lisong/"
+    "name": "Jeffrey",
+    "email": "611207137@qq.com",
+    "url": "https://github.com/Jeffrey/"
   },
   "bin": {
     "code-push-server": "./bin/www",
